@@ -1,0 +1,57 @@
+body {
+  background-color: #0a0a2a;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.sec-line-con {
+  top: 270px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 39.5%;
+}
+.third-line-con {
+  top: 540px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 39.5%;
+}
+.card {
+  width: 160px;
+  height: 220px;
+  position: relative;
+  perspective: 1000px;
+  margin: 5px;
+}
+.back {
+  position: absolute;
+  backface-visibility: hidden;
+  transition: 0.4s linear;
+  transform: rotateY(0deg);
+}
+.back img {
+  width: 100%;
+}
+.card:hover .back {
+  transform: rotateY(-180deg);
+  cursor: pointer;
+}
+.front {
+  position: absolute;
+  transition: 0.4s linear;
+  backface-visibility: hidden;
+  transform: rotateY(-180deg);
+}
+.front img {
+  width: 100%;
+}
+.card:hover .front {
+  transform: rotateY(0deg);
+  cursor: pointer;
+}
